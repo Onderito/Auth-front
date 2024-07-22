@@ -1,0 +1,46 @@
+<div
+  class="mx-auto p-12 bg-white rounded-lg shadow-md backdrop-blur-2xl bg-white/30 ring-2 ring-white/60"
+>
+  <form class="flex flex-col gap-4" [formGroup]="profileForm">
+    <div>
+      <label for="name" class="block text-white">Name:</label>
+      <input
+        id="name"
+        formControlName="name"
+        type="text"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      />
+    </div>
+    <div>
+      <label for="email" class="block text-white">Email:</label>
+      <input
+        id="email"
+        formControlName="email"
+        type="email"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      />
+    </div>
+    <div>
+      <label for="password" class="block text-white">Password:</label>
+      <input
+        id="password"
+        formControlName="password"
+        type="password"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      />
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <button
+        (click)="updateProfile()"
+        type="submit"
+        class="font-semibold w-full bg-blue-500 text-white p-2 rounded-lg"
+      >
+        Update Profile
+      </button>
+      <button class="font-semibold w-full bg-red-500 text-white p-2 rounded-lg">
+        Delete profile
+      </button>
+    </div>
+  </form>
+</div>

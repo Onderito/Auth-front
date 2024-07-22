@@ -1,0 +1,31 @@
+<nav
+  *ngIf="!isAuthenticated"
+  class="bg-white p-4 backdrop-blur-2xl bg-white/40 mx-auto max-w-[30rem] z-10 rounded-full ring-2 ring-white/60 fixed top-28 left-4 right-4"
+>
+  <div class="flex justify-center items-center text-white">
+    <div>
+      <a
+        *ngIf="!isAuthenticated"
+        routerLink="/login"
+        routerLinkActive="text-white"
+        class="text-white font-semibold"
+        >Login</a
+      >
+      <a
+        *ngIf="!isAuthenticated"
+        routerLink="/register"
+        routerLinkActive="text-white"
+        class="ml-4 text-white font-semibold"
+        >Register</a
+      >
+    </div>
+    <!-- Autres éléments de navigation peuvent être ajoutés ici -->
+  </div>
+</nav>
+<button
+  class="font-semibold fixed top-0 right-0 text-white bg-red-400 px-2 py-2 rounded-full m-4"
+  *ngIf="isAuthenticated"
+  (click)="logout()"
+>
+  Logout
+</button>

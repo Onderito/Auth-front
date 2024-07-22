@@ -1,0 +1,45 @@
+<div class="flex items-center justify-center h-screen">
+  <div
+    class="max-w-xl mx-auto p-12 bg-white rounded-lg shadow-md backdrop-blur-2xl bg-white/30 ring-2 ring-white/60"
+  >
+    <p class="text-center text-xl text-white font-semibold mb-4">Connexion</p>
+
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium text-white"
+          >Email</label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          placeholder="exemple@example.com"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="password" class="block text-sm font-medium text-white"
+          >Mot de passe</label
+        >
+        <input
+          type="password"
+          id="password"
+          name="password"
+          formControlName="password"
+          class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+          placeholder="********"
+        />
+      </div>
+      <div class="mb-4">
+        <button
+          type="submit"
+          [disabled]="userForm.invalid"
+          class="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-indigo-600 transition duration-200"
+        >
+          Connexion
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
